@@ -2,7 +2,7 @@
 Laravel Site
 
 
-# Documentation 
+# Documentation
 **Composer installation**:
 php:https://www.youtube.com/watch?v=GWwhLfTRAV8
 composer-setup:https://www.youtube.com/watch?v=usMGJEeTTZU
