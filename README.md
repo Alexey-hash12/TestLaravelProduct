@@ -22,3 +22,4 @@ php artisan make:controller
 
 **VK**
 composer require laravel/socialite
+https://socialiteproviders.com/VKontakte/#vkontakte
