@@ -14,3 +14,10 @@ openserver bash: ```cd domains
                     composer create-project --prefer-dist laravel/laravel testproject
                  ```
 openserver settings: change domain to "testproject/public"                 
+
+**Artisan**
+bash ```
+php artisan config:cache
+php artisan make:model
+php artisan make:controller
+```
