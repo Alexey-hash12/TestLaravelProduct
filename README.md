@@ -16,8 +16,9 @@ openserver bash: ```cd domains
 openserver settings: change domain to "testproject/public"                 
 
 **Artisan**
-bash ```
-php artisan config:cache
+bash php artisan config:cache
 php artisan make:model
 php artisan make:controller
-```
+
+**VK**
+composer require laravel/socialite
