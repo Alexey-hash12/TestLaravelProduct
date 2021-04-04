@@ -13,7 +13,7 @@ class CreateDictationResultsTable extends Migration
      */
     public function up()
     {
-         Schema::create('dictation_results', function (Blueprint $table) {
+         Schema::create('dictation_result_models', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('dictation_id')->unsigned()->index();
             $table->foreign('dictation_id')->references('id')->on('dictation_models');
@@ -21,6 +21,7 @@ class CreateDictationResultsTable extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->text("text");
             $table->dateTime('input_at');
+            $table->timestamps();
         });
     }
 

@@ -12,15 +12,17 @@ class CreateDictationModelsTable extends Migration
      * @return void
      */
     public function up()
+    // roolback
     {
         Schema::create('dictation_models', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string("title");
             $table->string("link");
             $table->boolean("status");
-            $table->string("description");
+            $table->text("description");
             $table->dateTime("started_at");
             $table->dateTime("finished_at");
+            $table->timestamps();
         });
     }
 

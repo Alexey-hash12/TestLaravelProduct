@@ -23,6 +23,11 @@ return [
     'postmark' => [
         'token' => env('POSTMARK_TOKEN'),
     ],
+    'vkontakte' => [    
+      'client_id' => env('VKONTAKTE_CLIENT_ID'),  
+      'client_secret' => env('VKONTAKTE_CLIENT_SECRET'),  
+      'redirect' => env('VKONTAKTE_REDIRECT_URI') 
+    ],
 
     'ses' => [
         'key' => env('AWS_ACCESS_KEY_ID'),
@@ -33,5 +38,4 @@ return [
     'sparkpost' => [
         'secret' => env('SPARKPOST_SECRET'),
     ],
-
 ];

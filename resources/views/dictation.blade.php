@@ -10,7 +10,7 @@ Dictation|Page
             <div class="card">
                 <div class="card-header">Total dictation: {{$dict->title}}</div>
                 <div class="card-body">                
-                     <textarea class="form-control" style="resize:none;" name="text" readonly="true" placeholder="{{$data->text}}" id="text" cols="30" rows="10"></textarea>
+                     <textarea class="dictation-input form-control" name="text" readonly="true" placeholder="{{$data->text}}" id="text" cols="30" rows="10"></textarea>
                 </div>
             </div>
         </div>
