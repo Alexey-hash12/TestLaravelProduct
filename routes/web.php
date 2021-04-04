@@ -11,14 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'MainController@main')->name("main");
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::group(['middleware' => 'guest'], function() {
-	Route::get("/vk/auth", "SosialController@index")->name("vk.auth");
-	Route::get("/vk/auth/callback/", 'SosialController@callback');
-});
+Route::post("check", "MainController@check")->name("check");
+Route::get("/dictation/{res_id}/", "MainController@dictation")->name("dictation");
+Route::get('/error/', 'MainController@error')->name("error");

@@ -19,12 +19,6 @@ return [
         'secret' => env('MAILGUN_SECRET'),
         'endpoint' => env('MAILGUN_ENDPOINT', 'api.mailgun.net'),
     ],
-    
-    'vkontakte' => [    
-      'client_id' => env('VKONTAKTE_CLIENT_ID'),  
-      'client_secret' => env('VKONTAKTE_CLIENT_SECRET'),  
-      'redirect' => env('VKONTAKTE_REDIRECT_URI') 
-    ],
 
     'postmark' => [
         'token' => env('POSTMARK_TOKEN'),

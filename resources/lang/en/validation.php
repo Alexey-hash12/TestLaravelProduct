@@ -94,7 +94,11 @@ return [
     'not_regex' => 'The :attribute format is invalid.',
     'numeric' => 'The :attribute must be a number.',
     'present' => 'The :attribute field must be present.',
-    'regex' => 'The :attribute format is invalid.',
+    'regex' => 'The :attribute must contain Russian or English letters;
+must contain uppercase and lowercase letters;
+must contain at least one digit;
+must contain at least one special character;
+the password must be at least 6 characters long..',
     'required' => 'The :attribute field is required.',
     'required_if' => 'The :attribute field is required when :other is :value.',
     'required_unless' => 'The :attribute field is required unless :other is in :values.',
