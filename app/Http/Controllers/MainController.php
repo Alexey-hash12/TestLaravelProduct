@@ -16,7 +16,7 @@ class MainController extends Controller
 
     public function dictation($res_id) {
     	$data = DictationResultModel::where('id', '=', $res_id)->first();
-    	$dict = DictationModel::where('id', '=', $data->dictation_id)->first();
+    	$dict = DictationModel::where('title', '=', $data->title_of_dictation)->first();
     	return view('dictation', ["data" => $data, 'dict' => $dict]);
     }
 
@@ -26,9 +26,10 @@ class MainController extends Controller
 
     public function check(Request $request) {
     	$res = new DictationResultModel();
-    	if ($res->where('user_id', auth()->user()->id)->count() == 0) {
-    		$res->user_id = auth()->user()->id;
-    		$res->dictation_id = $request->data;
+    	if ($res->where('user_email', auth()->user()->email)->count() == 0) {
+    		$res->user_name = auth()->user()->name;
+            $res->user_email = auth()->user()->email;
+            $res->title_of_dictation = $request->data;
     		$res->text = $request->text;
     		$res->input_at = new Carbon();
     		$res->save();

@@ -15,10 +15,12 @@ class CreateDictationResultsTable extends Migration
     {
          Schema::create('dictation_result_models', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('dictation_id')->unsigned()->index();
-            $table->foreign('dictation_id')->references('id')->on('dictation_models');
-            $table->bigInteger('user_id')->unsigned()->index();
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->text('dictation_title')->unsigned()->index();
+            $table->foreign('dictation_id')->references('title')->on('dictation_models');
+            $table->text('user_name')->unsigned()->index();
+            $table->foreign('user_name')->references('name')->on('users');
+             $table->text('user_email')->unsigned()->index();
+            $table->foreign('user_email')->references('email')->on('users');           
             $table->text("text");
             $table->dateTime('input_at');
             $table->timestamps();

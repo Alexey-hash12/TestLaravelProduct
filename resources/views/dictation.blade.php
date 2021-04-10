@@ -5,6 +5,7 @@ Dictation|Page
 @endsection
 
 @section("content")
+<!-- Dictation -->
 <div class="container">
 	<div class="col-md-8">
             <div class="card">
@@ -19,4 +20,5 @@ Dictation|Page
      <span>Dectation Passed Date: {{$data->input_at}}</span>
  </div>
 </div>
+<!-- End Dictation -->
 @endsection

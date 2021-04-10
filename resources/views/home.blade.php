@@ -5,10 +5,11 @@ Profile|Page
 @endsection
 
 @section('content')
+<!-- Main -->
 @if ($data)
 <div class="container">
     <div class="row justify-content ">
-        <iframe width="500" height="300" src="{{$data->link}}" frameborder="0" allowfullscreen class="dictation-video"></iframe>
+        <iframe width="500" height="300" src="{{ $data->link }}" frameborder="0" allowfullscreen class="dictation-video"></iframe>
 
         <div class="col-md-8">
             <div class="card">
@@ -16,7 +17,7 @@ Profile|Page
                 <div class="card-body">
                     <form action="{{ route('check') }}" method="post">
                     @csrf
-                    <input type="hidden" name='data' value='{{$data->id}}' id='data'>
+                    <input type="hidden" name='data' value='{{ $data->title }}' id='data'>
                      <textarea class="dictation-input form-control" name="text" placeholder="Print text here" id="text" cols="30" rows="10"></textarea>
                      <button type="submit" class='btn btn-danger dictation-btn'>Submit for review</button>
                    </form>
@@ -28,4 +29,5 @@ Profile|Page
 @else
 No such dictation
 @endif
+<!-- End Main -->
 @endsection

@@ -12,7 +12,7 @@ class CreateDictationModelsTable extends Migration
      * @return void
      */
     public function up()
-    // roolback
+    // roolback to refresh migratoins
     {
         Schema::create('dictation_models', function (Blueprint $table) {
             $table->bigIncrements('id');

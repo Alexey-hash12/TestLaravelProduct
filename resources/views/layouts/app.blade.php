@@ -14,12 +14,12 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="{{ asset ('https://fonts.googleapis.com/css?family=Nunito')}}" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/main.css') }}" rel="stylesheet">
     
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{asset ('https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css')}}">
 </head>
 <body>
     <!-- Header -->
@@ -57,5 +57,10 @@
 <main class="py-4">
     @yield('content')
 </main>
+
+<!-- Footer -->
+
+<!-- End Footer -->
+
 </body>
 </html>
